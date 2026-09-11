@@ -1,0 +1,6 @@
+{
+  "name": "Lava10 Lavanderia Automática",
+  "description": "Lava10 Lavanderia Automática em Cachoeira do Sul - RS. Lave e seque suas roupas de forma rápida, prática e automática.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

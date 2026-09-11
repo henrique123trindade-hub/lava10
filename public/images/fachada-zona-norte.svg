@@ -1,0 +1,248 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="headerBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0E2A6D" />
+      <stop offset="50%" stop-color="#123B8E" />
+      <stop offset="100%" stop-color="#0B2154" />
+    </linearGradient>
+    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.3" />
+      <stop offset="25%" stop-color="#E0F2FE" stop-opacity="0.1" />
+      <stop offset="70%" stop-color="#BAE6FD" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="badgeYellow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047" />
+      <stop offset="100%" stop-color="#EAB308" />
+    </linearGradient>
+    <linearGradient id="badgeBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1D4ED8" />
+      <stop offset="100%" stop-color="#1E40AF" />
+    </linearGradient>
+    <filter id="badgeShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Background Wall -->
+  <rect width="1200" height="900" fill="#F8FAFC" />
+
+  <!-- 1. Top Blue Header Banner: "LOCALIZAÇÃO DA LAVANDERIA" -->
+  <rect x="0" y="0" width="1200" height="175" fill="url(#headerBlue)" />
+
+  <!-- Map Pin Icon on Left of Header -->
+  <g transform="translate(130, 40)">
+    <path d="M45,10 C25,10 10,25 10,45 C10,75 45,105 45,105 C45,105 80,75 80,45 C80,25 65,10 45,10 Z" fill="#FFFFFF" />
+    <circle cx="45" cy="45" r="14" fill="#0E2A6D" />
+  </g>
+
+  <!-- Header Title -->
+  <text x="245" y="85" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="52" font-weight="900" fill="#FFFFFF" letter-spacing="3">
+    LOCALIZAÇÃO DA
+  </text>
+  <text x="245" y="145" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="52" font-weight="900" fill="#FFFFFF" letter-spacing="3">
+    LAVANDERIA
+  </text>
+
+  <!-- Soap Bubbles Graphics on Header Right (as in photo) -->
+  <g stroke="#FDE047" stroke-width="4" fill="none" opacity="0.8">
+    <circle cx="1020" cy="55" r="28" />
+    <circle cx="1085" cy="70" r="18" />
+    <circle cx="975" cy="95" r="14" />
+    <circle cx="1125" cy="115" r="22" stroke="#FFFFFF" />
+    <circle cx="1045" cy="120" r="12" stroke="#93C5FD" />
+  </g>
+
+  <!-- 2. Store Signage Board: White Facade with "LAVANDERIA AUTO ATENDIMENTO" -->
+  <rect x="60" y="195" width="1080" height="180" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="4" rx="4" />
+  
+  <text x="600" y="275" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="72" font-weight="900" fill="#123B8E" letter-spacing="4" text-anchor="middle">
+    LAVANDERIA
+  </text>
+  <text x="600" y="345" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="40" font-weight="800" fill="#123B8E" letter-spacing="7" text-anchor="middle">
+    AUTO ATENDIMENTO
+  </text>
+
+  <!-- 3. Glass Front Storefront -->
+  <!-- Outer Storefront Opening -->
+  <rect x="60" y="390" width="1080" height="460" fill="#0F172A" />
+
+  <!-- Interior Background (Floor & Walls) -->
+  <rect x="60" y="390" width="1080" height="280" fill="#F1F5F9" />
+  <!-- Interior Wall Panels -->
+  <rect x="290" y="440" width="180" height="70" rx="4" fill="#1E3A8A" opacity="0.9" />
+  <text x="380" y="480" font-family="'Montserrat', sans-serif" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">
+    LAVANDERIA
+  </text>
+  <text x="380" y="498" font-family="'Montserrat', sans-serif" font-size="9" fill="#93C5FD" text-anchor="middle">
+    INSTRUÇÕES
+  </text>
+
+  <!-- Interior Floor Tiles -->
+  <polygon points="60,670 1140,670 1140,850 60,850" fill="#E2E8F0" />
+  <line x1="300" y1="670" x2="250" y2="850" stroke="#CBD5E1" stroke-width="2" />
+  <line x1="600" y1="670" x2="580" y2="850" stroke="#CBD5E1" stroke-width="2" />
+  <line x1="900" y1="670" x2="910" y2="850" stroke="#CBD5E1" stroke-width="2" />
+
+  <!-- Commercial Washing Machines inside (visible through glass) -->
+  <g transform="translate(500, 460)">
+    <!-- Machine Double Stack -->
+    <rect x="0" y="0" width="170" height="260" rx="8" fill="#E2E8F0" stroke="#94A3B8" stroke-width="3" />
+    <!-- Upper Drum -->
+    <circle cx="85" cy="70" r="50" fill="#334155" stroke="#CBD5E1" stroke-width="6" />
+    <circle cx="85" cy="70" r="40" fill="#0F172A" />
+    <!-- Lower Drum -->
+    <circle cx="85" cy="180" r="50" fill="#334155" stroke="#CBD5E1" stroke-width="6" />
+    <circle cx="85" cy="180" r="40" fill="#0F172A" />
+    <!-- Label LA4NB 3 (as seen in photo) -->
+    <rect x="35" y="240" width="100" height="16" rx="2" fill="#1E293B" />
+    <text x="85" y="252" font-family="'Montserrat', sans-serif" font-size="10" font-weight="700" fill="#38BDF8" text-anchor="middle">
+      LA4NB 3
+    </text>
+  </g>
+
+  <!-- Central Table with White Laundry Basket (as in photo) -->
+  <g transform="translate(485, 590)">
+    <!-- Table Frame -->
+    <rect x="15" y="40" width="165" height="110" fill="none" stroke="#1E293B" stroke-width="5" />
+    <line x1="15" y1="95" x2="180" y2="95" stroke="#1E293B" stroke-width="4" />
+    <!-- White Laundry Basket Inside -->
+    <rect x="45" y="55" width="105" height="85" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2" />
+    <!-- Basket Grid Texture -->
+    <line x1="60" y1="65" x2="60" y2="130" stroke="#E2E8F0" stroke-width="2" />
+    <line x1="80" y1="65" x2="80" y2="130" stroke="#E2E8F0" stroke-width="2" />
+    <line x1="100" y1="65" x2="100" y2="130" stroke="#E2E8F0" stroke-width="2" />
+    <line x1="120" y1="65" x2="120" y2="130" stroke="#E2E8F0" stroke-width="2" />
+    <line x1="135" y1="65" x2="135" y2="130" stroke="#E2E8F0" stroke-width="2" />
+  </g>
+
+  <!-- Waiting Chairs on Right (as seen in photo) -->
+  <g transform="translate(860, 620)">
+    <!-- Stainless Steel Bench -->
+    <path d="M20,60 L70,60 L90,10 L100,10 L80,75 L15,75 Z" fill="#94A3B8" />
+    <path d="M95,60 L145,60 L165,10 L175,10 L155,75 L90,75 Z" fill="#94A3B8" />
+    <line x1="15" y1="75" x2="20" y2="130" stroke="#64748B" stroke-width="6" />
+    <line x1="165" y1="75" x2="170" y2="130" stroke="#64748B" stroke-width="6" />
+    <line x1="10" y1="130" x2="185" y2="130" stroke="#475569" stroke-width="4" />
+  </g>
+
+  <!-- 4. Glass Surface & Reflections -->
+  <rect x="60" y="390" width="1080" height="460" fill="url(#glassGradient)" />
+
+  <!-- 5. REAL MARKETING GLASS DECALS (Exact replicas from the photo!) -->
+  
+  <!-- Decal 1: "Aqui! OMO Comfort" (Left) -->
+  <g transform="translate(180, 520)" filter="url(#badgeShadow)">
+    <circle cx="65" cy="65" r="65" fill="#FFFFFF" stroke="#38BDF8" stroke-width="5" />
+    <!-- "Aqui!" -->
+    <text x="65" y="42" font-family="'Montserrat', sans-serif" font-size="14" font-weight="900" fill="#0F172A" text-anchor="middle">
+      Aqui!
+    </text>
+    <!-- OMO Logo splash & text -->
+    <text x="65" y="68" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="24" font-weight="900" fill="#0284C7" text-anchor="middle" letter-spacing="1">
+      OMO
+    </text>
+    <!-- Comfort cursive badge -->
+    <rect x="18" y="78" width="94" height="26" rx="13" fill="#1E3A8A" />
+    <text x="65" y="96" font-family="'Brush Script MT', cursive, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">
+      Comfort
+    </text>
+  </g>
+
+  <!-- Decal 2: "LAVE ou SEQUE EM 30 MIN" (Center Left Blue) -->
+  <g transform="translate(510, 530)" filter="url(#badgeShadow)">
+    <circle cx="65" cy="65" r="65" fill="url(#badgeBlue)" stroke="#FFFFFF" stroke-width="4" />
+    <text x="65" y="44" font-family="'Montserrat', sans-serif" font-size="18" font-weight="900" fill="#FFFFFF" text-anchor="middle">
+      LAVE
+    </text>
+    <text x="65" y="59" font-family="'Montserrat', sans-serif" font-size="11" font-weight="700" fill="#FDE047" text-anchor="middle">
+      ou
+    </text>
+    <text x="65" y="78" font-family="'Montserrat', sans-serif" font-size="18" font-weight="900" fill="#FFFFFF" text-anchor="middle">
+      SEQUE
+    </text>
+    <text x="65" y="100" font-family="'Montserrat', sans-serif" font-size="12" font-weight="800" fill="#93C5FD" text-anchor="middle" letter-spacing="0.5">
+      EM 30 MIN
+    </text>
+  </g>
+
+  <!-- Decal 3: "EM MÉDIA 20 PEÇAS" (Center Yellow) -->
+  <g transform="translate(680, 530)" filter="url(#badgeShadow)">
+    <circle cx="65" cy="65" r="65" fill="url(#badgeYellow)" stroke="#1D4ED8" stroke-width="4" />
+    <text x="65" y="42" font-family="'Montserrat', sans-serif" font-size="12" font-weight="800" fill="#0E2A6D" text-anchor="middle">
+      EM MÉDIA
+    </text>
+    <text x="65" y="74" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="30" font-weight="900" fill="#0E2A6D" text-anchor="middle">
+      20
+    </text>
+    <text x="65" y="94" font-family="'Montserrat', sans-serif" font-size="13" font-weight="900" fill="#0E2A6D" text-anchor="middle">
+      PEÇAS
+    </text>
+    <text x="65" y="110" font-family="'Montserrat', sans-serif" font-size="9" font-weight="700" fill="#1E3A8A" text-anchor="middle">
+      (1 cesto médio)
+    </text>
+  </g>
+
+  <!-- Decal 4: "POR APENAS R$15,90" (Right Yellow/Blue) -->
+  <g transform="translate(850, 530)" filter="url(#badgeShadow)">
+    <circle cx="65" cy="65" r="65" fill="url(#badgeYellow)" stroke="#1D4ED8" stroke-width="4" />
+    <text x="65" y="46" font-family="'Montserrat', sans-serif" font-size="12" font-weight="800" fill="#0E2A6D" text-anchor="middle">
+      POR APENAS
+    </text>
+    <text x="65" y="80" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="22" font-weight="900" fill="#123B8E" text-anchor="middle">
+      R$ 15,90
+    </text>
+    <text x="65" y="102" font-family="'Montserrat', sans-serif" font-size="10" font-weight="700" fill="#1E3A8A" text-anchor="middle">
+      por ciclo
+    </text>
+  </g>
+
+  <!-- Decal 5: Lava10 Official Emblem (Bottom Left Glass) -->
+  <g transform="translate(130, 720)" filter="url(#badgeShadow)">
+    <circle cx="70" cy="70" r="65" fill="#123B8E" stroke="#FFFFFF" stroke-width="4" />
+    <circle cx="70" cy="70" r="58" fill="#0E2A6D" stroke="#3B82F6" stroke-width="1.5" />
+    
+    <!-- Top Arched Text: LAVANDERIA -->
+    <path id="curveFilialTop" d="M 18,70 A 52,52 0 0,1 122,70" fill="none" />
+    <text font-family="'Montserrat', sans-serif" font-size="10" font-weight="900" fill="#FFFFFF" letter-spacing="1.5">
+      <textPath href="#curveFilialTop" startOffset="50%" text-anchor="middle">
+        LAVANDERIA
+      </textPath>
+    </text>
+
+    <!-- Center Machine & Text -->
+    <rect x="48" y="45" width="30" height="34" rx="3" fill="#FFFFFF" />
+    <circle cx="63" cy="62" r="10" fill="#123B8E" />
+    <circle cx="63" cy="62" r="7" fill="#93C5FD" />
+    <text x="70" y="93" font-family="'Montserrat', sans-serif" font-size="13" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">
+      LAVA 10
+    </text>
+
+    <!-- Bottom Arched Text: AUTO ATENDIMENTO -->
+    <path id="curveFilialBottom" d="M 122,70 A 52,52 0 0,1 18,70" fill="none" />
+    <text font-family="'Montserrat', sans-serif" font-size="7.5" font-weight="800" fill="#FFFFFF" letter-spacing="1">
+      <textPath href="#curveFilialBottom" startOffset="50%" text-anchor="middle">
+        AUTO ATENDIMENTO
+      </textPath>
+    </text>
+  </g>
+
+  <!-- Aluminum Window Frames -->
+  <rect x="60" y="390" width="1080" height="460" fill="none" stroke="#FFFFFF" stroke-width="10" />
+  <line x1="420" y1="390" x2="420" y2="850" stroke="#FFFFFF" stroke-width="8" />
+  <line x1="780" y1="390" x2="780" y2="850" stroke="#FFFFFF" stroke-width="8" />
+
+  <!-- Sidewalk Floor -->
+  <polygon points="0,850 1200,850 1200,900 0,900" fill="#475569" />
+  <rect x="0" y="850" width="1200" height="8" fill="#334155" />
+
+  <!-- Filial Zona Norte Badge -->
+  <g transform="translate(80, 210)">
+    <rect width="280" height="32" rx="16" fill="#123B8E" />
+    <circle cx="16" cy="16" r="8" fill="#22C55E" />
+    <text x="36" y="21" font-family="'Montserrat', sans-serif" font-size="11" font-weight="800" fill="#FFFFFF" letter-spacing="1">
+      FILIAL &bull; ZONA NORTE (24H)
+    </text>
+  </g>
+</svg>
