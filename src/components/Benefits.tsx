@@ -38,7 +38,7 @@ export const Benefits: React.FC = () => {
           
           {/* Left: Editorial Image Block */}
           <div className="lg:col-span-5">
-            <div className="relative rounded-2xl overflow-hidden shadow-md bg-white border border-slate-200/60 aspect-3/4">
+            <div className="relative rounded-2xl overflow-hidden shadow-md bg-white border border-slate-200/60 aspect-[16/10] sm:aspect-[3/4]">
               <img
                 src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=700&q=75"
                 alt="Roupas limpas e dobradas em ambiente moderno de lavanderia"

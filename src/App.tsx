@@ -4,13 +4,13 @@ import { Hero } from './components/Hero';
 import { Benefits } from './components/Benefits';
 import { HowItWorks } from './components/HowItWorks';
 import { Services } from './components/Services';
+import { Locations } from './components/Locations';
+import { MapSection } from './components/MapSection';
 import { Footer } from './components/Footer';
 import { WhatsAppButton } from './components/WhatsAppButton';
-import { PhotoManagerWidget } from './components/PhotoManagerWidget';
+import { MobileBottomBar } from './components/MobileBottomBar';
 
-// Dynamic lazy loading for below-the-fold and heavy components (improves initial mobile TTI and FCP under 2s on 3G/4G)
-const Locations = lazy(() => import('./components/Locations').then((m) => ({ default: m.Locations })));
-const MapSection = lazy(() => import('./components/MapSection').then((m) => ({ default: m.MapSection })));
+// Lightweight lazy loading for secondary content
 const Tips = lazy(() => import('./components/Tips').then((m) => ({ default: m.Tips })));
 const FAQ = lazy(() => import('./components/FAQ').then((m) => ({ default: m.FAQ })));
 const InstagramSection = lazy(() => import('./components/InstagramSection').then((m) => ({ default: m.InstagramSection })));
@@ -18,8 +18,7 @@ const ContactSection = lazy(() => import('./components/ContactSection').then((m)
 const OwnerGuideModal = lazy(() => import('./components/OwnerGuideModal').then((m) => ({ default: m.OwnerGuideModal })));
 const NotFoundView = lazy(() => import('./components/NotFoundView').then((m) => ({ default: m.NotFoundView })));
 
-// Non-blocking minimal skeleton fallback
-const SectionFallback = () => <div className="min-h-[140px] bg-transparent" />;
+const SectionFallback = () => <div className="min-h-[120px] bg-transparent" />;
 
 export default function App() {
   const [isOwnerGuideOpen, setIsOwnerGuideOpen] = useState(false);
@@ -53,15 +52,15 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-white text-[#111827] flex flex-col antialiased selection:bg-[#123B8E] selection:text-white">
-      {/* 1. Header / Navbar */}
+    <div className="min-h-screen bg-white text-[#111827] flex flex-col antialiased selection:bg-[#123B8E] selection:text-white pb-14 md:pb-0">
+      {/* 1. Header / Navbar with mobile fast-access */}
       <Navbar onOpenOwnerGuide={() => setIsOwnerGuideOpen(true)} />
 
       <main className="flex-1">
-        {/* 2. Hero Section - Immediately available with high-priority image */}
+        {/* 2. Hero Section - Mobile optimized with Andrade Neves facade */}
         <Hero />
 
-        {/* 3. Por que Lava10 - Immediate above-the-fold experience */}
+        {/* 3. Por que Lava10 - Immediate value proposition */}
         <Benefits />
 
         {/* 4. Como Funciona - Step sequence */}
@@ -70,14 +69,14 @@ export default function App() {
         {/* 5. Serviços - Services overview */}
         <Services />
 
-        {/* Below-the-fold heavy components with Native Lazy Loading & Suspense */}
+        {/* 6. Unidades - Matriz Centro & Filial Zona Norte */}
+        <Locations />
+
+        {/* 7. Google Maps - Instant loading without delay */}
+        <MapSection />
+
+        {/* Secondary informational components */}
         <Suspense fallback={<SectionFallback />}>
-          {/* 6. Unidades - Storefronts with lazy-loaded async images */}
-          <Locations />
-
-          {/* 7. Mapa Discreto do Google Maps - Lazy IntersectionObserver */}
-          <MapSection />
-
           {/* 8. Dicas para uma Lavagem Perfeita */}
           <Tips />
 
@@ -92,16 +91,16 @@ export default function App() {
         </Suspense>
       </main>
 
-      {/* 12. Footer Minimalista */}
+      {/* 12. Footer */}
       <Footer onOpenOwnerGuide={() => setIsOwnerGuideOpen(true)} />
 
-      {/* 13. Gerenciador e Seletor Fácil de Fotos das Fachadas */}
-      <PhotoManagerWidget />
+      {/* 13. Mobile Bottom Sticky Navigation Bar */}
+      <MobileBottomBar />
 
-      {/* 14. Botão Flutuante de WhatsApp (escondido se não houver número) */}
+      {/* 14. Botão Flutuante de WhatsApp */}
       <WhatsAppButton />
 
-      {/* Guia de Configuração (carregado sob demanda quando aberto) */}
+      {/* Guia de Configuração (aberto sob demanda) */}
       {isOwnerGuideOpen && (
         <Suspense fallback={null}>
           <OwnerGuideModal

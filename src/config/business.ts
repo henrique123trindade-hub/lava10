@@ -46,7 +46,7 @@ export const business: BusinessConfig = {
       is24Hours: false,
       mapsUrl: "https://maps.app.goo.gl/zYY95CyMMG4jYcji9",
       embedQuery: "Rua Andrade Neves, 1620, Cachoeira do Sul - RS",
-      image: "/images/fachada-andrade-neves.svg",
+      image: "/images/fachada-andrade-neves.jpg",
       alt: "Fachada da unidade principal Lava10 na Rua Andrade Neves, 1620, Centro",
       features: [
         "Lavadoras e secadoras profissionais",
@@ -69,7 +69,7 @@ export const business: BusinessConfig = {
       is24Hours: true,
       mapsUrl: "", // Preencher link do Maps quando disponível
       embedQuery: "",
-      image: "/images/fachada-zona-norte.svg",
+      image: "/images/fachada-zona-norte.jpg",
       alt: "Fachada da Lava10 Filial Zona Norte com atendimento 24 horas",
       features: [
         "Funcionamento 24 Horas ininterruptas",
